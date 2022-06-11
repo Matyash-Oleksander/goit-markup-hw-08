@@ -1,0 +1,215 @@
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 528px;
+  padding: 40px;
+  background-color: #fff;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  transition: transform 700ms ease, opacity 300ms ease-in-out;
+}
+
+/* початковий стан елемента перед анімацією */
+.backdrop.is-hidden .form {
+  transform: translate(-50%, -50%) scale(0.4);
+  opacity: 0;
+}
+
+/* кінцевий стан елемента після анімації */
+.backdrop .form {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+}
+
+/* .backdrop .modal-form {
+  animation: rotate-scale-down 1.9s ease-in;
+}
+
+@-webkit-keyframes rotate-scale-down {
+  0% {
+    -webkit-transform: scale(1) rotateZ(0);
+    transform: scale(1) rotateZ(0);
+  }
+  50% {
+    -webkit-transform: scale(0.5) rotateZ(180deg);
+    transform: scale(0.5) rotateZ(180deg);
+  }
+  100% {
+    -webkit-transform: scale(1) rotateZ(360deg);
+    transform: scale(1) rotateZ(360deg);
+  }
+} */
+
+.form__modal-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.form__btn-icon {
+  fill: #000000;
+  transition: fill var(--mid-anim);
+}
+.form__modal-btn:hover .form__btn-icon,
+.form__modal-btn:focus .form__btn-icon {
+  fill: #2196f3;
+}
+
+/* modal form */
+.form__title {
+  display: block;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 23px;
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  color: #212121;
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.form__group,
+.form__policy {
+  display: block;
+}
+.form__group {
+  position: relative;
+
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}
+
+.form-group.textarea {
+  margin-bottom: 20px;
+}
+.form__group-label {
+  display: block;
+  text-align: start;
+  margin-bottom: 4px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.01em;
+
+  color: #757575;
+}
+.form__input {
+  width: 100%;
+  padding: 10px 10px 10px 35px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  transition: border var(--mid-anim);
+}
+.form__icon {
+  position: absolute;
+  top: 30px;
+  left: 12px;
+  fill: #212121;
+  transition: fill var(--mid-anim);
+}
+.form__group .form__input:focus,
+.form__group .form__textarea:focus {
+  outline: transparent;
+  border: 1px solid #2196f3;
+}
+
+.form__group:focus-within > .form__icon {
+  fill: #2196f3;
+}
+.form__policy {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.form__textarea {
+  resize: none;
+  width: 100%;
+
+  padding: 12px 16px 12px 16px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.01em;
+}
+
+.custom-checkbox {
+  width: 16px;
+  height: 15px;
+  margin-right: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 2px;
+  outline: 1px solid #212121;
+  outline-offset: -2px;
+
+  transition: background-color var(--mid-anim);
+}
+
+.checkbox:checked + .custom-checkbox {
+  background-color: #2196f3;
+  outline: #2196f3;
+}
+
+.checkbox:focus + .custom-checkbox {
+  outline: 1px solid #2196f3;
+}
+.custom-checkbox-icon {
+  opacity: 0;
+  transition: opacity var(--mid-anim);
+}
+
+.checkbox:checked + .custom-checkbox .custom-checkbox-icon {
+  opacity: 1;
+}
+
+.form__policy-description {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+
+  letter-spacing: 0.03em;
+
+  color: #757575;
+}
+
+.form__btn {
+  width: 200px;
+  height: 50px;
+  display: inline-block;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 30px;
+  color: #ffffff;
+  background: #2196f3;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+}

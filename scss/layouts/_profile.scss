@@ -1,0 +1,40 @@
+/* Чем мы занимаемся */
+.profile__list {
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+.profile__item {
+  margin-right: 30px;
+  position: relative;
+  z-index: -1;
+
+  &:last-child {
+    margin-right: 0px;
+  }
+}
+
+.profile__title {
+  margin-bottom: 47px;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.7;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--primary-title-color);
+}
+
+.profile__text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding-top: 27px;
+  padding-bottom: 27px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #ffffff;
+  background: rgba(47, 48, 58, 0.8);
+}

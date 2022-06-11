@@ -1,0 +1,53 @@
+/* <!--Постоянные клиенты--> */
+.klient__title {
+  font-size: 36px;
+  line-height: 42px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--primary-title-color);
+  margin-bottom: 50px;
+}
+
+.klient__list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+.klient__item {
+  width: 170px;
+  height: 92px;
+  transition: border var(--mid-anim);
+  /* margin-right: 30px; */
+}
+
+.klient__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+  width: 100%;
+  height: 100%;
+  transition: border var(--mid-anim);
+
+  &:hover,
+  &:focus {
+    border: 1px solid #2196f3;
+  }
+}
+
+.klient__icons {
+  fill: #afb1b8;
+  transition: fill var(--mid-anim);
+}
+
+.klient__link:hover .klient__icons,
+.klient__link:focus .klient__icons {
+  fill: #2196f3;
+}
+
+/* .klient-section-item:last-child {
+  margin-right: 0px;
+} */
