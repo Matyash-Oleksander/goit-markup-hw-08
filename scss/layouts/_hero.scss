@@ -3,52 +3,74 @@
   margin-left: auto;
   margin-right: auto;
 
+  background: #2f303a;
+
+  background-repeat: no-repeat;
+  background-position: center;
+
+  background-size: cover;
+  text-align: center;
+
   @include mq(mobile) {
-    background: #2f303a;
     background-image: linear-gradient(
         rgba(47, 48, 58, 0.4),
         rgba(47, 48, 58, 0.4)
       ),
-      url(../images/studio/header.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
+      url(../images/studio/header/header-img_sm.png);
+
+    // Завантаження ретінізованого 2х фонового зображення
+
+    @include mq(retina) {
+      background-image: linear-gradient(
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)
+        ),
+        url(../images/studio/header/header-img_sm@2x.png);
+    }
     background-size: 480px;
-    background-size: cover;
-    text-align: center;
     padding-top: 118px;
     padding-bottom: 118px;
-    max-width: 480px;
   }
 
   @include mq(tablet) {
-    background: #2f303a;
     background-image: linear-gradient(
         rgba(47, 48, 58, 0.4),
         rgba(47, 48, 58, 0.4)
       ),
-      url(../images/studio/header.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
+      url(../images/studio/header/header-img_md.png);
+
+    // Завантаження ретінізованого 2х фонового зображення
+
+    @include mq(retina) {
+      background-image: linear-gradient(
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)
+        ),
+        url(../images/studio/header/header-img_md@2x.png);
+    }
+
     background-size: 768px;
-    background-size: cover;
-    text-align: center;
-    padding-top: 118px;
-    padding-bottom: 118px;
     max-width: 768px;
   }
 
   @include mq(desktop) {
-    background: #2f303a;
     background-image: linear-gradient(
         rgba(47, 48, 58, 0.4),
         rgba(47, 48, 58, 0.4)
       ),
-      url(../images/studio/header.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
+      url(../images/studio/header/header-img_lg.png);
+
+    // Завантаження ретінізованого 2х фонового зображення
+
+    @include mq(retina) {
+      background-image: linear-gradient(
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)
+        ),
+        url(../images/studio/header/header-img_lg@2x.png);
+    }
+
     background-size: 1600px;
-    background-size: cover;
-    text-align: center;
     padding-top: 200px;
     padding-bottom: 200px;
     max-width: 1600px;
