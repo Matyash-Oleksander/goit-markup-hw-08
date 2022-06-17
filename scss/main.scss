@@ -1,4 +1,5 @@
 // utils
+@import "./utils/mixins";
 @import "./utils/vars";
 @import "./utils/visually-hidden";
 
@@ -12,6 +13,7 @@
 @import "./components/modal-form";
 @import "./components/contact-form";
 @import "./components/projects-btn";
+@import "./components/mobile-menu";
 
 // layouts
 @import "./layouts/header";

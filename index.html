@@ -27,22 +27,94 @@
             Web
             <span class="logo--color"> Studio </span>
           </a>
+          <button
+            type="button"
+            class="menu-button is-open"
+            aria-expanded="false"
+            aria-controls="menu-mobile"
+            data-menu-button
+          >
+            <svg
+              aria-label="Переключатель мобильного меню"
+              width="40"
+              height="40"
+            >
+              <use
+                class="icon-cross"
+                href="./images/sprite.svg#icon-close_24px"
+              ></use>
+              <use
+                class="icon-menu"
+                href="./images/sprite.svg#icon-menu_24px"
+              ></use>
+            </svg>
+          </button>
+
           <ul class="header__list">
             <li class="header__item">
-              <a href="./index.html" class="header__link header__link-current">
-                Студия
-              </a>
+              <a href="./index.html" class="header__link"> Студия </a>
             </li>
             <li class="header__item">
-              <a href="./portfolio.html" class="header__link"> Портфолио </a>
+              <a
+                href="./portfolio.html"
+                class="header__link header__link-current"
+              >
+                Портфолио
+              </a>
             </li>
             <li class="item"><a href="" class="header__link"> Контакты </a></li>
           </ul>
         </nav>
+
+        <div class="menu-mobile" id="menu-mobile" data-menu>
+          <ul class="menu-mobile__list">
+            <li class="menu-mobile__item">
+              <a href="" class="menu-mobile__link">Студия</a>
+            </li>
+            <li class="menu-mobile__item">
+              <a href="" class="menu-mobile__link menu-mobile__link-current"
+                >Портфолио</a
+              >
+            </li>
+            <li class="menu-mobile__item">
+              <a href="" class="menu-mobile__link">Контакты</a>
+            </li>
+          </ul>
+          <ul class="menu-mobile__contacts">
+            <li class="menu-mobile__contacts-item">
+              <a href="tel:+380961111111" class="menu-mobile__contacts-link">
+                +38 096 111 11 11
+              </a>
+            </li>
+            <li class="menu-mobile__contacts-item">
+              <a
+                href="mailtoinfo@devstudio.com"
+                class="menu-mobile__contacts-link email"
+              >
+                info@devstudio.com
+              </a>
+            </li>
+          </ul>
+          <ul class="menu-mobile__social">
+            <li class="menu-mobile__social-item">
+              <a href="" class="menu-mobile__social-link">Instagram</a>
+            </li>
+            <li class="menu-mobile__social-item">
+              <a href="" class="menu-mobile__social-link">Twitter</a>
+            </li>
+            <li class="menu-mobile__social-item">
+              <a href="" class="menu-mobile__social-link">Facebook</a>
+            </li>
+            <li class="menu-mobile__social-item">
+              <a href="" class="menu-mobile__social-link">LinkedIn</a>
+            </li>
+          </ul>
+        </div>
+
         <ul class="auth-nav">
           <li class="auth-nav__item">
             <a href="mailtoinfo@devstudio.com" class="auth-nav__link">
-              <svg class="auth-nav__icons" width="16" height="12">
+              <svg class="auth-nav__icons first" width="16" height="12">
                 <use href="./images/sprite.svg#icon-envelope"></use>
               </svg>
               info@devstudio.com
@@ -139,7 +211,6 @@
       <!--Сильные стороны компании-->
       <section class="feature section">
         <div class="container feature">
-          <!-- <h2 class="feature-section-title">Сильные стороны компании</h2> -->
           <ul class="list feature__list">
             <li class="feature__item">
               <div class="feature__thumb">
@@ -219,6 +290,7 @@
           <ul class="list team__list">
             <li class="team__item">
               <img
+                class="team__img"
                 src="./images/studio/foto1.jpg"
                 alt="фото Демьяненко"
                 width="270"
@@ -280,6 +352,7 @@
             </li>
             <li class="team__item">
               <img
+                class="team__img"
                 src="./images/studio/foto2.jpg"
                 alt="фото Репина"
                 width="270"
@@ -341,6 +414,7 @@
             </li>
             <li class="team__item">
               <img
+                class="team__img"
                 src="./images/studio/foto3.jpg"
                 alt="фото Тарасов"
                 width="270"
@@ -402,6 +476,7 @@
             </li>
             <li class="team__item">
               <img
+                class="team__img"
                 src="./images/studio/foto4.jpg"
                 alt="фото Ермаков"
                 width="270"
@@ -518,79 +593,81 @@
     <!--Футер-->
     <footer class="footer">
       <div class="container footer__container">
-        <div class="footer__address-box">
-          <a href="./index.html" class="logo">
-            Web
-            <span class="logo--color-footer"> Studio </span>
-          </a>
-          <address class="footer__address">
-            г. Киев, пр-т Леси Украинки, 26
-          </address>
-          <ul class="list footer__list">
-            <li class="footer__item">
-              <a href="mailtoinfo@devstudio.com" class="footer__link">
-                info@devstudio.com
-              </a>
-            </li>
-            <li class="footer__item">
-              <a href="tel:+380961111111" class="footer__link">
-                +38 096 111 11 11
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div class="accession">
-          <h3 class="accession__social-title">присоединяйтесь</h3>
-          <ul class="list accession__social">
-            <li class="accession__team-icons">
-              <a
-                class="accession__social-link link"
-                href=""
-                target="_blank"
-                arial-label="иконка instagram"
-              >
-                <svg class="accession__icons" width="20" height="20">
-                  <use href="./images/sprite.svg#icon-instagram-2"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="accession__team-icons">
-              <a
-                class="accession__social-link link"
-                href=""
-                target="_blank"
-                arial-label="иконка twitter"
-              >
-                <svg class="accession__icons" width="20" height="20">
-                  <use href="./images/sprite.svg#icon-twitter-1"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="accession__team-icons">
-              <a
-                class="accession__social-link link"
-                href=""
-                target="_blank"
-                arial-label="иконка facebook"
-              >
-                <svg class="accession__icons" width="20" height="20">
-                  <use href="./images/sprite.svg#icon-facebook-1"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="accession__team-icons">
-              <a
-                class="accession__social-link link"
-                href=""
-                target="_blank"
-                arial-label="иконка linkedin"
-              >
-                <svg class="accession__icons" width="20" height="20">
-                  <use href="./images/sprite.svg#icon-linkedin-1"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
+        <div class="footer__box">
+          <div class="footer__address-box">
+            <a href="./index.html" class="logo">
+              Web
+              <span class="logo--color-footer"> Studio </span>
+            </a>
+            <address class="footer__address">
+              г. Киев, пр-т Леси Украинки, 26
+            </address>
+            <ul class="list footer__list">
+              <li class="footer__item">
+                <a href="mailtoinfo@devstudio.com" class="footer__link">
+                  info@devstudio.com
+                </a>
+              </li>
+              <li class="footer__item">
+                <a href="tel:+380961111111" class="footer__link">
+                  +38 096 111 11 11
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="accession">
+            <h3 class="accession__social-title">присоединяйтесь</h3>
+            <ul class="list accession__social">
+              <li class="accession__team-icons">
+                <a
+                  class="accession__social-link link"
+                  href=""
+                  target="_blank"
+                  arial-label="иконка instagram"
+                >
+                  <svg class="accession__icons" width="20" height="20">
+                    <use href="./images/sprite.svg#icon-instagram-2"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="accession__team-icons">
+                <a
+                  class="accession__social-link link"
+                  href=""
+                  target="_blank"
+                  arial-label="иконка twitter"
+                >
+                  <svg class="accession__icons" width="20" height="20">
+                    <use href="./images/sprite.svg#icon-twitter-1"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="accession__team-icons">
+                <a
+                  class="accession__social-link link"
+                  href=""
+                  target="_blank"
+                  arial-label="иконка facebook"
+                >
+                  <svg class="accession__icons" width="20" height="20">
+                    <use href="./images/sprite.svg#icon-facebook-1"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="accession__team-icons">
+                <a
+                  class="accession__social-link link"
+                  href=""
+                  target="_blank"
+                  arial-label="иконка linkedin"
+                >
+                  <svg class="accession__icons" width="20" height="20">
+                    <use href="./images/sprite.svg#icon-linkedin-1"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
         <div class="subscription">
           <strong class="subscription__title">Подпишитесь на рассылку</strong>
@@ -614,5 +691,6 @@
       </div>
     </footer>
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
   </body>
 </html>

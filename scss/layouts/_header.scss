@@ -5,6 +5,7 @@
 .header__container {
   display: flex;
   align-items: center;
+  position: relative;
 }
 
 .navigation {
@@ -33,6 +34,15 @@
   font-size: 14px;
   line-height: 1.1;
   letter-spacing: 0.02em;
+
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    margin-left: 84px;
+    margin-right: 84px;
+  }
 }
 
 .header__item {
@@ -75,39 +85,95 @@
 }
 
 .auth-nav {
-  display: flex;
-  margin-left: auto;
   font-weight: 500;
-  font-size: 14px;
-  line-height: 1.1;
   letter-spacing: 0.02em;
   color: var(--primary-text-color);
+
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    display: block;
+    margin-left: auto;
+    font-size: 12px;
+    line-height: 1.2;
+  }
+  @include mq(desktop) {
+    display: flex;
+    margin-left: auto;
+    font-size: 14px;
+    line-height: 1.1;
+  }
+}
+
+.auth-nav__item {
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    display: flex;
+    margin: 0;
+    margin-bottom: 10px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  @include mq(desktop) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 50px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
 }
 .auth-nav__link {
-  padding-top: 32px;
-  padding-bottom: 32px;
   color: currentColor;
   transition: color var(--mid-anim);
   color: var(--primary-text-color);
   text-decoration: none;
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    padding: 0;
+    // &:first-child {
+    //   padding-top: 21px;
+    // }
+
+    // &:last-child {
+    //   padding-bottom: 21px;
+    // }
+  }
+
+  @include mq(desktop) {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
 
   &:hover,
   &:focus {
     color: #2196f3;
   }
 }
-.auth-nav__item {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-right: 50px;
 
-  &:last-child {
-    margin-right: 0;
+.auth-nav__icons {
+  fill: currentColor;
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    &:last-child {
+      margin-right: 8px;
+      width: 10px;
+      height: 14px;
+    }
+  }
+  @include mq(desktop) {
+    margin-right: 10px;
   }
 }
 
-.auth-nav__icons {
-  margin-right: 10px;
-  fill: currentColor;
+.auth-nav__icons.first {
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    width: 14px;
+    height: 10px;
+  }
 }

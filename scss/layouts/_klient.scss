@@ -1,25 +1,60 @@
 /* <!--Постоянные клиенты--> */
 .klient__title {
-  font-size: 36px;
-  line-height: 42px;
+  font-size: 28px;
+  line-height: 32px;
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--primary-title-color);
-  margin-bottom: 50px;
+  margin-bottom: 30px;
+
+  @include mq(desktop) {
+    margin-bottom: 50px;
+    font-size: 36px;
+    line-height: 1.2;
+  }
 }
 
 .klient__list {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 30px;
+  @include mq(mobile) {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+  }
+
+  @include mq(tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+  }
+
+  @include mq(desktop) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 .klient__item {
-  width: 170px;
   height: 92px;
   transition: border var(--mid-anim);
   /* margin-right: 30px; */
+
+  @include mq(mobile) {
+    width: 210px;
+    margin: 15px;
+    width: calc((100% - 60px) / 2);
+  }
+
+  @include mq(tablet) {
+    width: 226px;
+    margin: 15px;
+    width: calc((100% - 90px) / 3);
+  }
+
+  @include mq(desktop) {
+    width: 170px;
+    width: calc((100% - 180px) / 6);
+  }
 }
 
 .klient__link {

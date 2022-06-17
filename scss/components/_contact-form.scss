@@ -1,6 +1,20 @@
 /* Подписка на страницу */
 .subscription {
-  width: 579px;
+  @include mq(mobile) {
+    display: block;
+    width: 450px;
+    text-align: center;
+  }
+  @include mq(tablet) {
+    display: block;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @include mq(desktop) {
+    width: 579px;
+  }
 }
 .subscription__title {
   display: block;
@@ -12,18 +26,34 @@
   text-transform: uppercase;
 
   color: #ffffff;
+
+  // @include mq(mobile) {
+  //   margin-bottom: 20px;
+  // }
+
+  @include mq(desktop) {
+    text-align: start;
+  }
 }
 
 .subscription__form {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include mq(mobile) {
+    display: block;
+  }
+
+  @include mq(tablet) {
+    display: block;
+  }
+
+  @include mq(desktop) {
+    display: flex;
+  }
 }
 
 .subscription__form-group {
   display: block;
   align-items: center;
-  margin-right: 21px;
+
   font-weight: 400;
   font-size: 16px;
   line-height: 20px;
@@ -31,6 +61,13 @@
   letter-spacing: 0.03em;
 
   color: rgba(255, 255, 255, 0.6);
+  @media screen and (max-width: 1199px) {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+  @include mq(desktop) {
+    margin-right: 21px;
+  }
 }
 
 .subscription__form-input {

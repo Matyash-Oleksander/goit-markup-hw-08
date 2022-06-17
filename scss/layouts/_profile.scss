@@ -1,4 +1,14 @@
 /* Чем мы занимаемся */
+.profile {
+  display: none;
+}
+
+.profile {
+  @include mq(desktop) {
+    display: block;
+  }
+}
+
 .profile__list {
   display: flex;
   align-items: center;
