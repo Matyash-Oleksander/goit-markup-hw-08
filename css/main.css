@@ -1225,7 +1225,7 @@ img {
   }
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (max-width: 766px) {
   .feature__item:not(:last-child) {
     margin-bottom: 30px;
   }
