@@ -13,8 +13,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
-
+    margin-top: 0;
     margin-bottom: 30px;
+    padding-left: 0;
   }
   @include mq(desktop) {
     margin-bottom: 50px;

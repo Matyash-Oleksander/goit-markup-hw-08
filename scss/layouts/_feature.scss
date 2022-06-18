@@ -1,7 +1,7 @@
 /* Section Сильные стороны компании*/
-.feature {
-  padding-bottom: 0px;
-}
+// .feature {
+//   padding-bottom: 60px;
+// }
 
 .feature__list {
   display: block;
@@ -26,11 +26,9 @@
 }
 
 .feature__item {
-  @media screen and (min-width: 450px) and (max-width: 767px) {
-    margin-bottom: 30px;
-
-    &:last-child {
-      margin-bottom: 60px;
+  @include mq(mobile) {
+    &:not(:last-child) {
+      margin-bottom: 30px;
     }
   }
 
